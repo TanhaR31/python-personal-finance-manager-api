@@ -2,6 +2,9 @@
 
   A Flask-based REST API for managing personal finances with SQLite database, statistical analysis, and linear regression income forecasting.
 
+# 📺 Demo Video #
+
+  Watch the full demonstration: https://youtu.be/OjfdaPnYREU
 
 # Installation #
 
