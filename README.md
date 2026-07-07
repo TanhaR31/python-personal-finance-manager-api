@@ -8,7 +8,7 @@
   1. Clone or Download the Project
 
   ```bash
-  cd Assignment_V2
+  cd personal-finance-manager
   ```
 
   2. Create a Virtual Environment
