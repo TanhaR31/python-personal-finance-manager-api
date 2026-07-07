@@ -1,0 +1,453 @@
+{
+	"info": {
+		"_postman_id": "7fb3b5cf-8e95-4231-93ee-78b1473b5614",
+		"name": "Finance Manager API",
+		"description": "Postman collection for Assignment V2 Flask API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "50558487",
+		"_collection_link": "https://contact-tanhareja-1221135.postman.co/workspace/Tanha-Reja's-Workspace~9a3fe40c-d6ca-4532-8ae2-b98c96061da3/collection/50558487-7fb3b5cf-8e95-4231-93ee-78b1473b5614?action=share&source=collection_link&creator=50558487"
+	},
+	"item": [
+		{
+			"name": "Add Account",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"A2\",\n  \"name\": \"My Savings Account\",\n  \"currency\": \"HUF\"\n}"
+				},
+				"url": {
+					"raw": "{{baseURL}}/accounts",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Accounts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/accounts",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Single Account",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/accounts/A1",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"accounts",
+						"A1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Account",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Updated Savings Account\",\r\n  \"currency\": \"EUR\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/accounts/A1",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"accounts",
+						"A1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Account",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/accounts/A1",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"accounts",
+						"A1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Income (Jan)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"I1\",\n  \"account_id\": \"A1\",\n  \"date\": \"2025-01-15\",\n  \"amount\": 300000,\n  \"source\": \"salary\"\n}"
+				},
+				"url": {
+					"raw": "{{baseURL}}/income",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"income"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Income (Feb)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"I4\",\n  \"account_id\": \"A1\",\n  \"date\": \"2025-02-15\",\n  \"amount\": 320000,\n  \"source\": \"salary\"\n}"
+				},
+				"url": {
+					"raw": "{{baseURL}}/income",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"income"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Incomes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/income",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"income"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Single Income",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/income/I1",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"income",
+						"I1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Income",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"amount\": 310000,\r\n  \"source\": \"Salary + Bonus\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/income/I1",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"income",
+						"I1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Income",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/income/I4",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"income",
+						"I4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Transaction (Income)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"T1\",\n  \"account_id\": \"A1\",\n  \"date\": \"2025-01-10\",\n  \"amount\": 50000,\n  \"type\": \"income\",\n  \"category\": \"bonus\"\n}"
+				},
+				"url": {
+					"raw": "{{baseURL}}/transactions",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Transaction (Expense)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"T3\",\n  \"account_id\": \"A1\",\n  \"date\": \"2025-01-20\",\n  \"amount\": 5000,\n  \"type\": \"expense\",\n  \"category\": \"food\",\n  \"note\": \"Groceries\"\n}"
+				},
+				"url": {
+					"raw": "{{baseURL}}/transactions",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Transactions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/transactions",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"transactions"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "2025-01-01",
+							"disabled": true
+						},
+						{
+							"key": "to",
+							"value": "2025-01-10",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Single Transaction",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/transactions/T1",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"transactions",
+						"T1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Transaction",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"amount\": 7000,\r\n  \"note\": \"Updated amount\",\r\n  \"date\": \"2025-01-15\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/transactions/T2",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"transactions",
+						"T2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Transaction",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/transactions/T3",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"transactions",
+						"T3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Summary Stats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/stats/summary?from=2025-01-01&to=2025-01-15",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"stats",
+						"summary"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "2025-01-01"
+						},
+						{
+							"key": "to",
+							"value": "2025-01-15"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Income Forecast (3 months)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/stats/income_forecast?n_months=3",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"stats",
+						"income_forecast"
+					],
+					"query": [
+						{
+							"key": "n_months",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
